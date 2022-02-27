@@ -1,5 +1,13 @@
 button {
-  @apply rounded-full bg-youmi-purple text-youmi-white  disabled:bg-youmi-light-grey  hover:bg-opacity-90 focus:shadow-lg focus:bg-opacity-100;
+  @apply rounded-full 
+  bg-dark-purple 
+  text-white-background  
+  disabled:bg-light-grey  
+  hover:bg-opacity-90
+   focus:shadow-lg
+    focus:bg-opacity-100
+     animate-popSlow 
+     m-4;
 }
 
 .xSmall {
