@@ -1,0 +1,22 @@
+button {
+  @apply rounded-full bg-youmi-purple text-youmi-white  disabled:bg-youmi-light-grey  hover:bg-opacity-90 focus:shadow-lg focus:bg-opacity-100;
+}
+
+.xSmall {
+  @apply px-4 min-w-[4rem] h-[36px];
+  @apply md:text-sm text-xs md:font-light font-extralight;
+}
+
+.small {
+  @apply px-4 min-w-[6rem] h-[36px];
+  @apply md:text-base text-sm;
+}
+
+.large {
+  @apply px-4 min-w-[6rem] h-[46px] md:min-w-[11rem] md:h-[56px];
+  @apply md:text-lg text-base;
+}
+
+.fullWidth {
+  /* @apply min-w-full #{!important}; */
+}
