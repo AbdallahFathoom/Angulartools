@@ -8,4 +8,14 @@
   [disabled]="true"
 ></app-button>
 
-<!-- <app-text-field></app-text-field> -->
+<div class="fields" [formGroup]="form">
+  <app-text-field
+    [FGN]="form"
+    FCN="email"
+    label="Email address"
+    inputType="email"
+  ></app-text-field>
+  <div class="erroMessage" *ngIf="isValid('email')">
+    your email is not valid
+  </div>
+</div>

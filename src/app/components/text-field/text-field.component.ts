@@ -27,7 +27,6 @@ export class TextFieldComponent implements OnInit {
   // 4- password
   // 5- date
   @Input() inputType: string = 'text';
-  @Input() height: string = 'h-[56px]';
   @Output() changeEmitter = new EventEmitter<boolean>();
   constructor() {}
 

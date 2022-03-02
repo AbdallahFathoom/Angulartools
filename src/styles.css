@@ -2,3 +2,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.erroMessage {
+  @apply text-red my-2;
+}
