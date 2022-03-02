@@ -7,5 +7,6 @@ import { SharedModule } from 'src/app/components/shared.module';
 @NgModule({
   declarations: [ToolsComponent],
   imports: [CommonModule, ReactiveFormsModule, SharedModule],
+  exports: [ToolsComponent],
 })
 export class MytoolsModule {}

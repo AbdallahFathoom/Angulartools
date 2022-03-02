@@ -2,7 +2,7 @@ button {
   @apply rounded-full 
   bg-dark-purple 
   text-white-background  
-  disabled:bg-light-grey  
+  disabled:bg-light-grey  disabled:text-purple
   hover:bg-opacity-90
    focus:shadow-lg
     focus:bg-opacity-100
@@ -26,5 +26,5 @@ button {
 }
 
 .fullWidth {
-  /* @apply min-w-full #{!important}; */
+  @apply min-w-full;
 }

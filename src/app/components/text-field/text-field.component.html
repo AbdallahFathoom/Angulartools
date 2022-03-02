@@ -1,1 +1,14 @@
-<p>text-field works!</p>
+<form [formGroup]="FGN">
+  <input
+    ngClass="{{ height }}"
+    i18n
+    [type]="inputType"
+    [placeholder]="label"
+    [formControlName]="FCN"
+    [attr.step]="step"
+    [attr.min]="min"
+    [attr.max]="max"
+    (change)="emitChange()"
+    [value]="preSetValue | date: 'yyyy-MM-dd'"
+  />
+</form>
