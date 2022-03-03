@@ -1,0 +1,15 @@
+<mat-form-field appearance="fill" floatLabel="never">
+  <mat-label>{{ placeholder }}</mat-label>
+  <ng-container [formGroup]="FGN" ]>
+    <mat-select
+      [formControlName]="FCN"
+      [disabled]="disabled"
+      [multiple]="multiple"
+      (selectionChange)="emitChange()"
+    >
+      <mat-option *ngFor="let value of data" [value]="value.id">
+        {{ value.text }}
+      </mat-option>
+    </mat-select>
+  </ng-container>
+</mat-form-field>

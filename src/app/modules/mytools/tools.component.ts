@@ -5,6 +5,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
+import { FEMALE, GENDERS } from 'src/app/constants/genders';
 import { emailPattern } from 'src/app/constants/validators';
 
 @Component({
@@ -13,23 +14,33 @@ import { emailPattern } from 'src/app/constants/validators';
   styleUrls: ['./tools.component.css'],
 })
 export class ToolsComponent implements OnInit {
+  // declare form group
   form: FormGroup;
+  genders = GENDERS;
+  preSelectGender = FEMALE;
+
+  // inject form builder
   constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {
+    // declare your form group controls
     this.form = this.fb.group({
       email: new FormControl('', [
         Validators.required,
         Validators.pattern(emailPattern),
       ]),
+      password: new FormControl('', [Validators.required]),
+      number: new FormControl('', [Validators.required]),
+      text: new FormControl('', [Validators.required]),
+      date: new FormControl('', [Validators.required]),
+      gender: new FormControl('', [Validators.required]),
     });
   }
 
+  // checking if the form components are valid
   isValid = (controlName: any) =>
     this.form.controls[controlName].touched &&
     this.form.controls[controlName].errors
-      ? // &&
-        // this.form.controls[controlName].valid
-        true
+      ? true
       : false;
 }

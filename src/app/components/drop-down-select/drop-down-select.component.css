@@ -1,0 +1,80 @@
+::ng-deep .mat-form-field {
+  width: 100% !important;
+  padding: 1rem 0 !important;
+}
+:ng-deep .mat-form-field .mat-form-field-wrapper {
+  @apply pb-0;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+  box-shadow: 0 0px 25px -5px #e5e7eb, 0 8px 10px -6px #e5e7eb;
+  border-radius: 9999px !important;
+  padding: 0 !important;
+  align-items: center !important;
+  height: 2.74rem !important;
+  @apply bg-white w-full border border-light-grey focus:ring-2 focus:ring-purple shadow-gray-200 px-6 focus:border-purple;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-underline::before {
+  height: 0 !important;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-ripple {
+  height: 0 !important;
+}
+
+::ng-deep .mat-form-field-label-wrapper {
+  top: 0;
+  padding-top: 0;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-label {
+  top: 0;
+  margin-top: 0;
+}
+
+::ng-deep
+  .mat-form-field-can-float.mat-form-field-should-float
+  .mat-form-field-label,
+.mat-form-field-can-float
+  .mat-input-server:focus
+  + .mat-form-field-label-wrapper
+  .mat-form-field-label {
+  display: none !important;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-infix {
+  padding: 0 !important;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+  padding: 0 1.5rem 0 1.5rem !important;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-select-arrow-wrapper {
+  transform: none !important;
+}
+
+::ng-deep .mat-option:not(.mat-active):hover,
+::ng-deep .mat-option:not(.mat-active):focus {
+  background: rgb(245 242 255);
+}
+
+::ng-deep .mat-option.mat-active,
+::ng-deep .mat-option.mat-active:hover:not(.mat-option-disabled) {
+  background: rgb(90, 47, 223);
+  color: #ffffff;
+}
+
+::ng-deep .mat-select-panel {
+  border-radius: 20px !important;
+}
+
+::ng-deep .mat-select-panel .mat-optgroup-label,
+::ng-deep .mat-select-panel .mat-option:not(:last-child) {
+  border-bottom: 1px solid rgba(176, 176, 176, 0.3);
+}
+
+::ng-deep .mat-form-field-infix {
+  border-top: 0 !important;
+}

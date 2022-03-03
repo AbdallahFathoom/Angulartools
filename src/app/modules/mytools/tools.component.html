@@ -1,13 +1,6 @@
-<p>tools works!</p>
-<!-- normal button -->
-<app-button label="Button" color="purple" [disabled]="false"></app-button>
-<!-- diabled buttons -->
-<app-button
-  label="Button Disabled"
-  color="purple"
-  [disabled]="true"
-></app-button>
+<p>Components with form Validation!</p>
 
+<!-- email field  with validation-->
 <div class="fields" [formGroup]="form">
   <app-text-field
     [FGN]="form"
@@ -18,4 +11,58 @@
   <div class="erroMessage" *ngIf="isValid('email')">
     your email is not valid
   </div>
+  <!-- password field  with validation-->
+  <app-text-field
+    [FGN]="form"
+    FCN="password"
+    label="Password"
+    inputType="password"
+  ></app-text-field>
+  <div class="erroMessage" *ngIf="isValid('password')">
+    your password is not valid
+  </div>
+  <!-- number field  with validation-->
+  <app-text-field
+    [FGN]="form"
+    FCN="number"
+    label="number"
+    inputType="number"
+  ></app-text-field>
+  <div class="erroMessage" *ngIf="isValid('number')">
+    your number is not valid
+  </div>
+  <!-- text field  with validation-->
+  <app-text-field
+    [FGN]="form"
+    FCN="text"
+    label="text"
+    inputType="text"
+  ></app-text-field>
+  <div class="erroMessage" *ngIf="isValid('text')">your text is not valid</div>
+  <!-- date field  with validation-->
+  <app-text-field
+    [FGN]="form"
+    FCN="date"
+    label="date"
+    inputType="date"
+  ></app-text-field>
+  <div class="erroMessage" *ngIf="isValid('date')">your date is not valid</div>
+
+  <!-- drop down select with validation  -->
+  <app-drop-down-select
+    [FGN]="form"
+    FCN="gender"
+    [data]="genders"
+    label="Gender"
+    height="h-11"
+    [preSetValue]="preSelectGender"
+  ></app-drop-down-select>
+  <!-- normal button -->
+  <app-button label="Cancel" color="purple" [disabled]="false"></app-button>
+  <!-- diabled buttons -->
+  <app-button
+    label="Submit"
+    color="purple"
+    [disabled]="!form.valid"
+  ></app-button>
 </div>
