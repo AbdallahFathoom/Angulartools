@@ -1,11 +1,26 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { MainLayoutComponent } from './Layout/main-layout/main-layout.component';
 import { ToolsComponent } from './modules/mytools/tools.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: ToolsComponent,
+    component: MainLayoutComponent,
+    children: [
+      {
+        path: 'forms',
+        loadChildren: () =>
+          import('./modules/forms/forms.module').then((m) => m.FormsModule),
+      },
+      {
+        path: 'mytools',
+        loadChildren: () =>
+          import('./modules/mytools/mytools.module').then(
+            (m) => m.MytoolsModule
+          ),
+      },
+    ],
   },
 ];
 

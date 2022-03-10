@@ -5,7 +5,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
-import { FEMALE, GENDERS } from 'src/app/constants/genders';
+import { GENDERS, MALE } from 'src/app/constants/genders';
 import { emailPattern } from 'src/app/constants/validators';
 
 @Component({
@@ -17,7 +17,7 @@ export class ToolsComponent implements OnInit {
   // declare form group
   form: FormGroup;
   genders = GENDERS;
-  preSelectGender = FEMALE;
+  preSelectGender = MALE;
 
   // inject form builder
   constructor(private fb: FormBuilder) {}

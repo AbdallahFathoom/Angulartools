@@ -6,9 +6,11 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './components/shared.module';
 import { MytoolsModule } from './modules/mytools/mytools.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MainLayoutComponent } from './Layout/main-layout/main-layout.component';
+import { FormsComponent } from './modules/forms/forms.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, MainLayoutComponent, FormsComponent],
   imports: [BrowserModule, AppRoutingModule, SharedModule, MytoolsModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],

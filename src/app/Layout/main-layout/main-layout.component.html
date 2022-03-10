@@ -1,0 +1,103 @@
+<div class="dashboardContainer">
+  <div class="navigationBarContainer">
+    <div class="logo">
+      <img src="../../../assets/logo.svg" alt="" />
+    </div>
+    <div class="navigationContainer">
+      <div class="navigationBar">
+        <div class="navigationLink" *ngFor="let link of navigationMenu">
+          <a routerLink="{{ link.link }}" [routerLinkActive]="['active']">
+            <div class="navLinkIcon">
+              <img
+                src="{{ link.iconPathInactive }}"
+                alt="{{ link.linkName }}"
+              />
+            </div>
+            <div class="hidden navLinkText lg:flex">
+              {{ link.linkName }}
+            </div>
+          </a>
+        </div>
+      </div>
+      <hr />
+      <!-- <div class="navigationBar">
+          <div
+            class="navigationLink"
+            *ngFor="let link of secondaryNavigationMenu"
+          >
+            <a routerLink="{{ link.link }}" [routerLinkActive]="['active']">
+              <div class="px-2 navLinkText lg:ps-0 lg:pe-2">
+                {{ link.linkName }}
+              </div>
+            </a>
+          </div>
+        </div> -->
+    </div>
+  </div>
+  <div class="navigationPlatform"></div>
+  <div class="mainContainer">
+    <div class="dashboardHeader">
+      <div class="headerTitleBar">
+        <h1>Dashboard</h1>
+      </div>
+      <div class="headerContentBox">
+        <div class="searchContainer">
+          <!-- <youmi-search></youmi-search> -->
+        </div>
+        <div class="accountContainer">
+          <div class="headerNotificationContainer">
+            <div class="headerNotifications">
+              <button>
+                <img
+                  class="m-auto"
+                  src="../../../assets/icons/notification.svg"
+                  alt=""
+                />
+              </button>
+            </div>
+          </div>
+          <!-- profile drop down -->
+          <div class="flex flex-col accountInfoContainer group">
+            <div class="user-image">
+              <img [src]="userImageUrl" alt="Avatar" class="avatar" />
+            </div>
+            <span>
+              <div
+                class="z-50 hidden divide-y shadow-xl profile-menu group-hover:flex animate-slide"
+              >
+                <div class="flex flex-col user-info">
+                  <div class="flex items-center mx-auto menu-user-image">
+                    <img [src]="userImageUrl" alt="Avatar" class="avatar" />
+                  </div>
+                  <h4 class="pt-2 pb-1">Mohamed Mukhtar</h4>
+                  <p class="pb-2">Super Admin</p>
+                </div>
+                <div class="flex flex-col pt-3">
+                  <a>Edit profile</a>
+                  <a>User List</a>
+                  <a routerLink="/vendor-details">Vendor details</a>
+                </div>
+
+                <div class="flex flex-col pt-3">
+                  <a>Lorem ipsum dolor</a>
+                  <a>Sit amet consectetur</a>
+                  <a>Adipisicing elit</a>
+                </div>
+                <div class="flex flex-col pt-3">
+                  <a>Sign Out</a>
+                </div>
+              </div>
+            </span>
+            <div class="h-4"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dashboardContentBox">
+      <div class="spinner-container" *ngIf="loading">
+        <app-loader></app-loader>
+      </div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

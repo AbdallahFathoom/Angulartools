@@ -1,0 +1,234 @@
+.dashboardContainer {
+  display: flex;
+  flex-direction: row;
+}
+.dashboardContainer .navigationBarContainer,
+.dashboardContainer .navigationPlatform {
+  max-width: 230px;
+
+  @apply w-[10%] lg:w-[20%];
+  @apply min-w-[100px];
+}
+.navigationBarContainer {
+  position: fixed;
+  background: #5a2fdf;
+
+  @apply rounded-r-3xl lg:rounded-r-[50px];
+  height: 100%;
+}
+.navigationBarContainer .logo {
+  display: flex;
+  justify-content: center;
+  padding: 5rem 0;
+}
+.navigationContainer {
+  @apply flex flex-col justify-center items-center w-full lg:justify-start lg:items-start lg:pl-12;
+}
+.navigationContainer .navigationBar .navigationLink a {
+  color: #867dcd;
+  transition: ease all 0.2s;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 1.5rem;
+  @apply justify-center lg:justify-start;
+}
+.navigationContainer .navigationBar .navigationLink a:hover {
+  color: #ffffff;
+}
+
+.navigationContainer .navigationBar .navigationLink a:active {
+  color: #ffffff;
+}
+.navigationContainer .navigationBar .navigationLink a:active img {
+  opacity: 1;
+}
+
+.navigationContainer .navigationBar .navigationLink a img {
+  @apply mx-auto lg:mx-0 opacity-80;
+  @apply transition duration-150 hover:opacity-60;
+}
+
+.navigationContainer .navigationBar .navigationLink a .navLinkIcon {
+  width: 30px;
+  text-align: center;
+  @apply mx-auto lg:ml-0 lg:mr-3 lg:text-center;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: #867dcd;
+  width: 30%;
+  margin-bottom: 1.5rem;
+}
+
+.mainContainer {
+  @apply mx-auto;
+  @apply lg:w-full w-[90%] max-w-[calc(100%-136px)]  lg:max-w-[calc(100%-230px)];
+}
+.mainContainer .dashboardContentBox {
+  @apply py-12 lg:px-16 px-8;
+}
+
+.mainContainer .dashboardHeader .headerTitleBar {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  @apply pb-4;
+}
+
+.mainContainer .dashboardHeader {
+  @apply flex flex-wrap-reverse items-center md:flex-row justify-end;
+
+  @apply px-4 lg:px-16;
+  @apply py-12;
+}
+
+.mainContainer .dashboardHeader .headerContentBox .searchContainer {
+  flex: 1;
+  margin-right: 1rem;
+  @apply w-full;
+}
+.mainContainer .dashboardHeader .headerContentBox .accountContainer {
+  display: flex;
+  flex-direction: row;
+  @apply justify-between space-x-4;
+}
+
+.mainContainer
+  .dashboardHeader
+  .headerContentBox
+  .accountContainer
+  .headerNotificationContainer,
+.mainContainer
+  .dashboardHeader
+  .headerContentBox
+  .accountContainer
+  .accountInfoContainer {
+  width: 45%;
+}
+
+.mainContainer
+  .dashboardHeader
+  .headerContentBox
+  .accountContainer
+  .headerNotificationContainer
+  .headerNotifications {
+  background: none;
+  display: block;
+}
+
+.mainContainer
+  .dashboardHeader
+  .headerContentBox
+  .accountContainer
+  .headerNotificationContainer
+  .headerNotifications
+  button {
+  @apply h-16 w-16;
+  background: #ffffff;
+  border: none;
+  padding: 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.mainContainer
+  .dashboardHeader
+  .headerContentBox
+  .accountContainer
+  .accountInfoContainer {
+  @apply relative;
+}
+
+.mainContainer
+  .dashboardHeader
+  .headerContentBox
+  .accountContainer
+  .accountInfoContainer
+  .user-image {
+  @apply rounded-full p-1 bg-white;
+  @apply w-16 h-16;
+}
+
+.mainContainer
+  .dashboardHeader
+  .headerContentBox
+  .accountContainer
+  .accountInfoContainer
+  .user-image
+  img {
+  @apply rounded-full object-cover w-full h-full;
+}
+
+.mainContainer
+  .dashboardHeader
+  .headerContentBox
+  .accountContainer
+  .accountInfoContainer
+  .profile-menu {
+  @apply absolute right-3;
+  @apply bg-white p-4 space-y-3 mt-4 rounded-xl w-60;
+  @apply flex-col;
+}
+
+.mainContainer
+  .dashboardHeader
+  .headerContentBox
+  .accountContainer
+  .accountInfoContainer
+  .profile-menu
+  .menu-user-image {
+  @apply rounded-full p-[6px] bg-light-purple;
+  @apply w-24 h-24;
+}
+
+.mainContainer
+  .dashboardHeader
+  .headerContentBox
+  .accountContainer
+  .accountInfoContainer
+  .profile-menu
+  .menu-user-image
+  img {
+  @apply rounded-full object-cover w-full h-full;
+}
+
+.mainContainer
+  .dashboardHeader
+  .headerContentBox
+  .accountContainer
+  .accountInfoContainer
+  .profile-menu
+  .user-info
+  h4 {
+  @apply font-semibold text-center;
+}
+
+.mainContainer
+  .dashboardHeader
+  .headerContentBox
+  .accountContainer
+  .accountInfoContainer
+  .profile-menu
+  .user-info
+  p {
+  @apply text-purple text-center;
+}
+
+.mainContainer
+  .dashboardHeader
+  .headerContentBox
+  .accountContainer
+  .accountInfoContainer
+  .profile-menu
+  a {
+  @apply p-2 w-full hover:bg-light-purple rounded-lg cursor-pointer select-none text-lg;
+}
+
+.mainContainer .dashboardHeader .headerContentBox {
+  @apply mx-auto;
+  @apply lg:w-1/2;
+  @apply flex flex-row justify-end;
+}
