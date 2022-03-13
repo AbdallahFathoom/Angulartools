@@ -5,7 +5,7 @@ import { SelectData } from 'src/app/constants/interfaces';
 @Component({
   selector: 'app-drop-down-select',
   templateUrl: './drop-down-select.component.html',
-  styleUrls: ['./drop-down-select.component.css'],
+  styleUrls: ['./drop-down-select.component.scss'],
 })
 export class DropDownSelectComponent implements OnInit {
   constructor() {}
