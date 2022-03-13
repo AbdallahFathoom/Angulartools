@@ -49,7 +49,7 @@
               width: 30px;
               text-align: center;
               // margin-right: 0.7rem;
-              @apply mx-auto lg:ml-0 lg:mr-3 lg:text-center text-start;
+              @apply mx-auto lg:ml-0 lg:mr-3 lg:text-center;
             }
           }
 
@@ -94,7 +94,7 @@
         flex: 1;
         display: flex;
         align-items: center;
-        @apply pb-4 pe-2;
+        @apply pb-4;
       }
 
       .headerContentBox {
