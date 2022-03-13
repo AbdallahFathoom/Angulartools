@@ -1,0 +1,181 @@
+.dashboardContainer {
+  display: flex;
+  flex-direction: row;
+
+  .navigationBarContainer,
+  .navigationPlatform {
+    // width: 20%;
+    // min-width: 250px;
+    max-width: 230px;
+
+    @apply w-[10%] lg:w-[20%];
+    @apply min-w-[100px];
+    // #{!important};
+  }
+  .navigationBarContainer {
+    position: fixed;
+    background: #5a2fdf;
+    // border-radius: 0 50px 50px 0;
+
+    @apply rounded-r-3xl lg:rounded-r-[50px];
+    height: 100%;
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      padding: 5rem 0;
+    }
+    .navigationContainer {
+      // padding: 0 0 0 3rem;
+
+      @apply flex flex-col justify-center items-center w-full lg:justify-start lg:items-start lg:pl-12;
+      .navigationBar {
+        .navigationLink {
+          a {
+            color: #867dcd;
+            transition: ease all 0.2s;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding-bottom: 1.5rem;
+            @apply justify-center lg:justify-start;
+
+            img {
+              @apply mx-auto lg:mx-0 opacity-80;
+              @apply transition duration-150 hover:opacity-60;
+            }
+
+            .navLinkIcon {
+              width: 30px;
+              text-align: center;
+              // margin-right: 0.7rem;
+              @apply mx-auto lg:ml-0 lg:mr-3 lg:text-center text-start;
+            }
+          }
+
+          a:hover {
+            color: #ffffff;
+          }
+
+          a.active {
+            color: #ffffff;
+            img {
+              opacity: 1;
+            }
+          }
+        }
+      }
+
+      hr {
+        border: none;
+        height: 1px;
+        background: #867dcd;
+        width: 30%;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  .mainContainer {
+    // width: 80%;
+    @apply mx-auto;
+    @apply lg:w-full w-[90%] max-w-[calc(100%-136px)]  lg:max-w-[calc(100%-230px)];
+
+    // min-width: calc(100% - 250px);
+    // max-width: calc(100% - 280px);
+
+    .dashboardHeader {
+      @apply flex flex-wrap-reverse items-center md:flex-row justify-end;
+
+      @apply px-4 lg:px-16;
+      @apply py-12;
+      // padding: 3rem 4rem;
+      .headerTitleBar {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        @apply pb-4 pe-2;
+      }
+
+      .headerContentBox {
+        @apply mx-auto;
+        @apply lg:w-1/2;
+        @apply flex flex-row justify-end;
+
+        .searchContainer {
+          flex: 1;
+          margin-right: 1rem;
+          @apply w-full;
+        }
+
+        .accountContainer {
+          display: flex;
+          flex-direction: row;
+          // width: 30%;
+          @apply justify-between space-x-4;
+
+          .headerNotificationContainer,
+          .accountInfoContainer {
+            width: 45%;
+          }
+          .headerNotificationContainer {
+            .headerNotifications {
+              background: none;
+              display: block;
+
+              button {
+                @apply h-16 w-16;
+                background: #ffffff;
+                border: none;
+                padding: 1rem;
+                border-radius: 20px;
+                cursor: pointer;
+              }
+            }
+          }
+          .accountInfoContainer {
+            @apply relative;
+            .user-image {
+              @apply rounded-full p-1 bg-white;
+              @apply w-16 h-16;
+              img {
+                @apply rounded-full object-cover w-full h-full;
+              }
+            }
+            .profile-menu {
+              @apply absolute right-3;
+              @apply bg-white p-4 space-y-3 mt-4 rounded-xl w-60;
+              @apply flex-col;
+              .menu-user-image {
+                @apply rounded-full p-[6px] bg-light-purple;
+                @apply w-24 h-24;
+
+                img {
+                  @apply rounded-full object-cover w-full h-full;
+                }
+              }
+              .user-info {
+                h4 {
+                  @apply font-semibold text-center;
+                }
+                p {
+                  @apply text-purple text-center;
+                }
+              }
+              a {
+                @apply p-2 w-full hover:bg-light-purple rounded-lg cursor-pointer select-none text-lg;
+              }
+            }
+          }
+        }
+      }
+    }
+    .dashboardContentBox {
+      // padding: 3rem 4rem;
+      @apply py-12 lg:px-16 px-8;
+    }
+  }
+}
+
+.spinner-container {
+}

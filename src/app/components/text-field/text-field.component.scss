@@ -1,0 +1,4 @@
+input {
+  box-shadow: 0 0px 25px -5px #e5e7eb, 0 8px 10px -6px #e5e7eb;
+  @apply w-full border border-light-grey rounded-full  focus:ring-1 focus:ring-purple shadow-gray-200 px-6 focus:border-purple disabled:bg-[rgba(0,0,0,0.02)] disabled:text-[rgba(0,0,0,0.38)];
+}
