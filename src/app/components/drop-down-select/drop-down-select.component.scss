@@ -1,6 +1,9 @@
 ::ng-deep {
   .mat-form-field {
     width: 100% !important;
+    padding: 1rem;
+    // to allign with the rest of the fields
+    margin-left: -2rem;
   }
 
   .mat-form-field-wrapper {
@@ -12,7 +15,7 @@
     border-radius: 9999px !important;
     padding: 0 !important;
     align-items: center !important;
-    height: 2.74rem !important;
+    height: 3rem !important;
     @apply bg-white w-full border border-light-grey focus:ring-2 focus:ring-purple shadow-gray-200 px-6 focus:border-purple;
   }
 

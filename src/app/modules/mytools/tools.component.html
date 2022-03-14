@@ -55,8 +55,16 @@
     [data]="genders"
     label="Gender"
     height="h-11"
-    [preSetValue]="preSelectGender"
   ></app-drop-down-select>
+  <!-- to set a pre-select drop down -->
+  <!-- [preSetValue]="preSelectGender" -->
+
+  <app-text-area
+    FCN="description"
+    [FGN]="form"
+    label="Description"
+  ></app-text-area>
+
   <!-- normal button -->
   <app-button label="Cancel" color="purple" [disabled]="false"></app-button>
   <!-- diabled buttons -->

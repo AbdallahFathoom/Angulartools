@@ -11,7 +11,13 @@ import { FormsComponent } from './modules/forms/forms.component';
 
 @NgModule({
   declarations: [AppComponent, MainLayoutComponent, FormsComponent],
-  imports: [BrowserModule, AppRoutingModule, SharedModule, MytoolsModule, BrowserAnimationsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    SharedModule,
+    MytoolsModule,
+    BrowserAnimationsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

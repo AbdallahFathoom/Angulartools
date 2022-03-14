@@ -6,6 +6,7 @@ import { TextFieldComponent } from './text-field/text-field.component';
 import { MatSelectModule } from '@angular/material/select';
 import { DropDownSelectComponent } from './drop-down-select/drop-down-select.component';
 import { LoaderComponent } from './loader/loader.component';
+import { TextAreaComponent } from './text-area/text-area.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { LoaderComponent } from './loader/loader.component';
     TextFieldComponent,
     DropDownSelectComponent,
     LoaderComponent,
+    TextAreaComponent,
   ],
   imports: [CommonModule, ReactiveFormsModule, MatSelectModule],
   exports: [
@@ -20,6 +22,7 @@ import { LoaderComponent } from './loader/loader.component';
     TextFieldComponent,
     DropDownSelectComponent,
     LoaderComponent,
+    TextAreaComponent,
   ],
 })
 export class SharedModule {}

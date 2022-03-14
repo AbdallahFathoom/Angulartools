@@ -34,6 +34,7 @@ export class ToolsComponent implements OnInit {
       text: new FormControl('', [Validators.required]),
       date: new FormControl('', [Validators.required]),
       gender: new FormControl('', [Validators.required]),
+      description: new FormControl('', [Validators.required]),
     });
   }
 
