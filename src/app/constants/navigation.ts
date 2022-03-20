@@ -1,6 +1,6 @@
 export const navigationMenu = [
   {
-    link: '/froms',
+    link: '/forms',
     iconPathInactive: '../../assets/icons/home.svg',
     iconPathActive: '../../assets/icons/white-icons/home.svg',
     active: false,
