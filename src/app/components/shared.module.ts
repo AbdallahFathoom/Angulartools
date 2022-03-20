@@ -7,6 +7,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { DropDownSelectComponent } from './drop-down-select/drop-down-select.component';
 import { LoaderComponent } from './loader/loader.component';
 import { TextAreaComponent } from './text-area/text-area.component';
+import { PhoneFieldComponent } from './phone-field/phone-field.component';
+import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
 
 @NgModule({
   declarations: [
@@ -15,14 +17,21 @@ import { TextAreaComponent } from './text-area/text-area.component';
     DropDownSelectComponent,
     LoaderComponent,
     TextAreaComponent,
+    PhoneFieldComponent,
   ],
-  imports: [CommonModule, ReactiveFormsModule, MatSelectModule],
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    MatSelectModule,
+    NgxIntlTelInputModule,
+  ],
   exports: [
     ButtonComponent,
     TextFieldComponent,
     DropDownSelectComponent,
     LoaderComponent,
     TextAreaComponent,
+    PhoneFieldComponent,
   ],
 })
 export class SharedModule {}
