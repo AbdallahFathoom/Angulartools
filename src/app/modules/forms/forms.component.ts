@@ -35,6 +35,7 @@ export class FormsComponent implements OnInit {
       date: new FormControl('', [Validators.required]),
       gender: new FormControl('', [Validators.required]),
       description: new FormControl('', [Validators.required]),
+      phoneNumber: new FormControl('', [Validators.required]),
     });
   }
 

@@ -57,6 +57,11 @@
   <!-- to set a pre-select drop down -->
   <!-- [preSetValue]="preSelectGender" -->
 
+  <app-phone-field [FGN]="form" FCN="phoneNumber"> </app-phone-field>
+  <div class="erroMessage" *ngIf="isValid('phoneNumber')">
+    your date is not valid
+  </div>
+
   <app-text-area
     FCN="description"
     [FGN]="form"
