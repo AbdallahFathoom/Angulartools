@@ -1,7 +1,16 @@
+// .iti__flag {
+//   background-image: url("path/to/flags.png");
+// }
+
+// @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+//   .iti__flag {
+//     background-image: url("path/to/flags@2x.png");
+//   }
+// }
+
 ::ng-deep .intl {
   .iti {
     @apply w-full;
-    @apply h-8;
   }
   .dropdown-toggle {
     @apply rounded-full;
@@ -13,7 +22,7 @@
     @apply rounded-xl;
   }
   #country-search-box {
-    @apply rounded-xl p-1  mb-1 outline-none border-0 ring-0;
+    @apply rounded-xl p-1 pl-2 mb-1 outline-none border-0 ring-0 #{!important};
   }
   ul {
     @apply rounded-xl mt-2;
