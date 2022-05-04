@@ -9,7 +9,11 @@ import { LoaderComponent } from './loader/loader.component';
 import { TextAreaComponent } from './text-area/text-area.component';
 import { PhoneFieldComponent } from './phone-field/phone-field.component';
 import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
-
+import { DatePickerComponent } from './date-picker/date-picker.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 @NgModule({
   declarations: [
     ButtonComponent,
@@ -18,12 +22,17 @@ import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
     LoaderComponent,
     TextAreaComponent,
     PhoneFieldComponent,
+    DatePickerComponent,
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
     MatSelectModule,
     NgxIntlTelInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   exports: [
     ButtonComponent,
@@ -32,6 +41,7 @@ import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
     LoaderComponent,
     TextAreaComponent,
     PhoneFieldComponent,
+    DatePickerComponent,
   ],
 })
 export class SharedModule {}

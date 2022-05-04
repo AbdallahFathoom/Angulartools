@@ -18,6 +18,7 @@ export class FormsComponent implements OnInit {
   form: FormGroup;
   genders = GENDERS;
   preSelectGender = MALE;
+  minDate: Date = new Date();
 
   // inject form builder
   constructor(private fb: FormBuilder) {}
@@ -33,6 +34,8 @@ export class FormsComponent implements OnInit {
       number: new FormControl('', [Validators.required]),
       text: new FormControl('', [Validators.required]),
       date: new FormControl('', [Validators.required]),
+      datePicker: new FormControl('', [Validators.required]),
+      time: new FormControl('', [Validators.required]),
       gender: new FormControl('', [Validators.required]),
       description: new FormControl('', [Validators.required]),
       phoneNumber: new FormControl('', [Validators.required]),

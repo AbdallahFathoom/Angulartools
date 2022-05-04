@@ -8,7 +8,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class ButtonComponent implements OnInit {
   @Input() public label: string = 'text';
   // these classes names are in tailwind configuration file
-  @Input() public color: string = 'purple';
+  @Input() public color: string = 'bg-purple';
   @Input() public textColor: string = 'primary-white';
   @Input() public disabled: boolean = false;
   @Input() public small: boolean = false;

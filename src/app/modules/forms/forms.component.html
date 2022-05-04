@@ -46,6 +46,14 @@
   ></app-text-field>
   <div class="erroMessage" *ngIf="isValid('date')">your date is not valid</div>
 
+  <app-text-field
+    [FGN]="form"
+    FCN="time"
+    label="time"
+    inputType="time"
+  ></app-text-field>
+  <div class="erroMessage" *ngIf="isValid('time')">your time is not valid</div>
+
   <!-- drop down select with validation  -->
   <app-drop-down-select
     [FGN]="form"
@@ -53,6 +61,7 @@
     [data]="genders"
     label="Gender"
     height="h-11"
+    placeholder="Select your gender"
   ></app-drop-down-select>
   <!-- to set a pre-select drop down -->
   <!-- [preSetValue]="preSelectGender" -->
@@ -68,8 +77,18 @@
     label="Description"
   ></app-text-area>
 
+  <!-- date picker -->
+  <app-date-picker
+    FCN="datePicker"
+    [FGN]="form"
+    [min]="minDate"
+  ></app-date-picker>
+  <div class="erroMessage" *ngIf="isValid('datePicker')">
+    the date is not valid
+  </div>
+
   <!-- normal button -->
-  <app-button label="Cancel" color="purple" [disabled]="false"></app-button>
+  <app-button label="Cancel" color="bg-purple" [disabled]="false"></app-button>
   <!-- diabled buttons -->
   <app-button
     label="Submit"
